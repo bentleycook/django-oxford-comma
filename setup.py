@@ -8,7 +8,7 @@ setup(
     author='Bellhops',
     author_email='tech@getbellhops.com',
     url='https://github.com/bellhops/django-oxford-comma/',
-    download_url='https://github.com/bellhops/django-oxford-comma/tarball/0.1',
+    download_url='https://github.com/bellhops/django-oxford-comma/tarball/0.1.1',
     keywords=['oxford comma', 'templatetags', 'grammer'],
     classifiers=[],
 )
