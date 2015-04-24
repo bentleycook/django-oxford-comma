@@ -29,13 +29,10 @@ class OxfordCommaNode(template.Node):
         except template.VariableDoesNotExist:
             return ''
         else:
+            if len(list_of_items) == 1:
+                return list_of_items[0]
             if len(list_of_items) == 2:
                 return "{first} and {second}".format(first=list_of_items[0], second=list_of_items[1])
             else:
-                to_return = ''
-                for item in list_of_items:
-                    if list_of_items.index(item) == len(list_of_items) - 1:
-                        to_return += "and {item}".format(item)
-                    else:
-                        to_return += "{item}, ".format(item)
-                return to_return
+                list_of_items[-1] = "and " + list_of_items[-1]
+                return ", ".join(list_of_items)
